@@ -17,7 +17,7 @@ const ProjectCarousel = (props) => {
           display: flex;
           padding: 100px 60px;
           gap: 100px;
-          overflow-x: hidden;
+          overflow-x: scroll;
 
           background-color: #E4E4E4;
           box-shadow: inset 0px 4px 8px rgba(0, 0, 0, 0.25), inset 0px -4px 8px rgba(0, 0, 0, 0.25);
@@ -50,11 +50,14 @@ const ProjectCarousel = (props) => {
   );
 };
 
+const getRandom = () =>
+  `https://picsum.photos/400/350?random=${Math.floor(Math.random() * 100)}`;
+
 const ProjectCard = ({ title, imagePath, imageAlt, linkURL }) => {
   return (
     <section className="project-card">
       <a href={linkURL} target="_blank" rel="noreferrer">
-        <img src={imagePath} alt={imageAlt} />
+        <img src={imagePath === '#' ? getRandom() : imagePath} alt={imageAlt} />
         <h2>{title}</h2>
       </a>
     </section>

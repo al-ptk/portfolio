@@ -18,8 +18,8 @@ const HeroIntro = (props) => {
         }
 
         .hero-intro img {
-          width: 300px;
-          height: 400px;
+          width: 30%;
+          aspect-ratio: 3 / 4;
           object-fit: cover;
           box-shadow: -2px 4px 6px 0 rgba(0,0,0,.5);
           margin: 0 30px;
@@ -27,6 +27,7 @@ const HeroIntro = (props) => {
 
         .hero-description {
           display: flex;
+          flex-wrap: wrap;
           align-items: center;
         }
 

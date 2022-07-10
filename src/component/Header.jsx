@@ -58,6 +58,7 @@ const Header = (props) => {
           height: inherit;
           background-color: rgba(255,255,255,.25);
         }
+
         `}
       </style>
       <nav>
