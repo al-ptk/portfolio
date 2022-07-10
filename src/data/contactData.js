@@ -1,25 +1,30 @@
+import linkedinIcon from '../assets/images/logos/linkedin-icon.png';
+import githubIcon from '../assets/images/logos/github.png';
+import emailIcon from '../assets/images/logos/email-icon.png';
+import whatsappIcon from '../assets/images/logos/whatsapp-icon.png';
+
 const contact = [
   {
     title: 'Linkedin',
-    iconPath: '#',
+    iconPath: linkedinIcon,
     iconAlt: 'Linkedin icon',
-    linkPath: '#',
+    linkPath: 'https://www.linkedin.com/in/alan-patrick-294180116/',
   },
   {
     title: 'Github',
-    iconPath: '#',
+    iconPath: githubIcon,
     iconAlt: 'Github icon',
-    linkPath: '#',
+    linkPath: 'https://github.com/al-ptk',
   },
   {
     title: 'E-mail',
-    iconPath: '#',
+    iconPath: emailIcon,
     iconAlt: 'E-mail icon',
     linkPath: '#',
   },
   {
     title: 'Whatsapp',
-    iconPath: '#',
+    iconPath: whatsappIcon,
     iconAlt: 'Whatsapp icon',
     linkPath: '#',
   },

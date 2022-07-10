@@ -2,9 +2,7 @@ import { useEffect } from 'react';
 import { getProjects } from '../data/projectsData';
 
 const ProjectCarousel = (props) => {
-  useEffect(() => {
-    document.querySelector('.ProjectCarousel').scrollLeft = 290;
-  }, []);
+
 
   return (
     <div className="ProjectCarousel">
@@ -19,7 +17,7 @@ const ProjectCarousel = (props) => {
           gap: 100px;
           overflow-x: scroll;
 
-          background-color: #E4E4E4;
+          background-color: #dedede;
           box-shadow: inset 0px 4px 8px rgba(0, 0, 0, 0.25), inset 0px -4px 8px rgba(0, 0, 0, 0.25);
         }
 
