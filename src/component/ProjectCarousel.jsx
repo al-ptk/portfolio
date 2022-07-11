@@ -3,7 +3,7 @@ import { getProjects } from '../data/projectsData';
 import './stylesheets/ProjectCarousel.css';
 
 const ProjectCarousel = (props) => {
-  const [index, setIndex] = useState(0);
+  const [index, setIndex] = useState(1);
   const carousel = useRef(null);
 
   const getPadLeft = (index) => {
