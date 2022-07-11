@@ -13,8 +13,9 @@ const HeroIntro = (props) => {
         .hero-intro h1 {
           font-weight: 600;
           font-size: 64px;
-          position: relative;
+          position: absolute;
           left: 50px;
+          max-width: 15ch;
         }
 
         .hero-intro img {

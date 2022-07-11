@@ -12,10 +12,11 @@ const Contact = (props) => {
         }
 
         #Contact h1 {
-          position: relative;
+          position: absolute;
           left: 40px;
           font-size: 64px;
           font-weight: 300;
+          max-width: 15ch;
         }
 
         #Contact ul {
