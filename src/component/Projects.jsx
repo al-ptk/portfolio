@@ -1,23 +1,9 @@
 import ProjectCarousel from './ProjectCarousel';
+import './stylesheets/Projects.css';
 
 const Projects = (props) => {
   return (
     <section id="Projects">
-      <style>
-        {`
-        #Projects {
-          display: flex;
-          flex-direction: column;
-          align-items: center;
-        }
-
-        #Projects h1 {
-          font-size: 56px;
-          font-weight: 300;
-          margin-bottom: 30px;
-        }
-        `}
-      </style>
       <h1>Some of my projects:</h1>
       <ProjectCarousel />
     </section>

@@ -1,51 +1,9 @@
 import { getContact } from '../data/contactData';
+import './stylesheets/Contact.css';
 
 const Contact = (props) => {
   return (
     <section id="Contact">
-      <style>
-        {`
-        #Contact {
-          max-width: 800px;
-          height: 600px;
-        }
-
-        #Contact h1 {
-          font-size: 64px;
-          font-weight: 300;
-        }
-
-        #Contact ul {
-          margin: 190px auto;
-          display: flex;
-          flex-flow: row wrap;
-          width: 90%;
-          justify-content: space-between;
-        }
-
-        .contact-item {
-          list-style: none;
-          transition: transform .1s ease-in-out;
-        }
-
-        .contact-item:hover {
-          transform: scale(1.15);
-        }
-
-        .contact-item a {
-          text-decoration: none;
-          display: flex;
-          flex-direction: column;
-          align-items: center;
-          gap: 20px;
-          color: black;
-        }
-
-        .contact-item img {
-          width: 130px;
-        }
-        `}
-      </style>
       <h1>You can find me at:</h1>
       <ul>
         {getContact().map((props, index) => (

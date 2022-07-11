@@ -2,6 +2,12 @@
   background-color: #eee;
 }
 
-main>section {
+main > section {
   margin: 35vh auto;
+}
+
+@media (max-width: 500px) {
+  main > section {
+    margin: 10vh auto;
+  }
 }
