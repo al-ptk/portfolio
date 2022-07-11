@@ -46,9 +46,13 @@ const ProjectCarousel = (props) => {
         >
           {'<'}
         </button>
-        {getProjects().map((props, index) => (
-          <button key={index} id={`b${index}`} onClick={() => setIndex(index)}>
-            {index}
+        {getProjects().map((props, listIndex) => (
+          <button
+            key={listIndex}
+            className={listIndex === index ? 'idxActive' : ''}
+            onClick={() => setIndex(listIndex)}
+          >
+            {listIndex}
           </button>
         ))}
         <button
