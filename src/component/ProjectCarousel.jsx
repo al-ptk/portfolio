@@ -3,7 +3,7 @@ import { getProjects } from '../data/projectsData';
 import './stylesheets/ProjectCarousel.css';
 
 const ProjectCarousel = (props) => {
-  const [index, setIndex] = useState(1);
+  const [index, setIndex] = useState(getProjects().length - 1);
   const carousel = useRef(null);
 
   const getPadLeft = (index) => {
@@ -24,6 +24,14 @@ const ProjectCarousel = (props) => {
       const currIdx = document.querySelector('button.idxActive').textContent;
       centerCurrent(currIdx);
     });
+    const threshold = document.querySelector('#Projects').offsetTop;
+    const scrollBack = () => {
+      if (window.scrollY >= threshold - 300) {
+        setIndex(0);
+        window.removeEventListener('scroll', scrollBack);
+      }
+    };
+    window.addEventListener('scroll', scrollBack);
   }, []);
 
   useEffect(() => {

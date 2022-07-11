@@ -19,27 +19,25 @@ const Bulletlist = ({ title, propsList, animationStart }) => {
 
 const BulletItem = ({ iconPath, iconAlt, title, animationStart }) => {
   const self = useRef(null);
-
+  
   const setAnimationOff = () => {
-    // Gets timing for each instance to transition
-    const customTiming = animationStart * 600;
+    let skills = document.querySelector('#Skills');
+    console.log('scrolling');
+    if (window.scrollY >= skills.offsetTop - 500) {
+      // Gets timing for each instance to transition
+      const customTiming = animationStart * 600;
 
-    // Sets off the opacity transition
-    setTimeout(() => {
-      self.current.style.opacity = 1;
-    }, customTiming);
+      // Sets off the opacity transition
+      setTimeout(() => {
+        self.current.style.opacity = 1;
+      }, customTiming);
+
+      window.removeEventListener('scroll', setAnimationOff);
+    }
   };
 
   useEffect(() => {
-    let listener = window.addEventListener('scroll', (e) => {
-      let skills = document.querySelector('#Skills');
-      console.log('scrolling');
-      if (window.scrollY >= skills.offsetTop - 500) {
-        console.log("I'm done!");
-        setAnimationOff();
-        window.removeEventListener('scroll', listener);
-      }
-    });
+    let listener = window.addEventListener('scroll', setAnimationOff);
   }, []);
 
   return (
