@@ -1,6 +1,15 @@
-.hero-intro {
+.hero-holder {
+  position: relative;
   min-height: 50vh;
-  margin-top: 200px;
+  margin-top: -40px;
+  display: grid;
+  place-items: center;
+}
+
+.hero-intro {
+  width: 100%;
+  height: inherit;
+  position: absolute;
   display: flex;
   justify-content: center;
   flex-wrap: wrap;
@@ -8,9 +17,17 @@
 
 .hero-intro h1 {
   font-weight: 600;
-  font-size: 7.8rem;
+  font-size: 7rem;
   max-width: 15ch;
   margin-top: -30px;
+  transform: translateY(-100px);
+  opacity: 0;
+  transition: all 1s ease-in-out;
+}
+
+.hero-intro h1.show {
+  opacity: 1;
+  transform: translateY(0);
 }
 
 .hero-intro img {
@@ -20,6 +37,14 @@
   object-fit: cover;
   box-shadow: -2px 4px 6px 0 rgba(0, 0, 0, 0.5);
   margin: 0 30px;
+  transform: translateX(-100px);
+  opacity: 0;
+  transition: all 1s ease-in-out;
+}
+
+.hero-intro img.show {
+  opacity: 1;
+  transform: translateX(0);
 }
 
 .hero-description {
@@ -31,9 +56,17 @@
 }
 
 .hero-description p {
-  font-size: 3.8rem;
+  font-size: 3.2rem;
   font-weight: 300;
   max-width: 450px;
+  transform: translateX(100px);
+  opacity: 0;
+  transition: all 1s ease-in-out;
+}
+
+.hero-description p.show {
+  opacity: 1;
+  transform: translateX(0);
 }
 
 @media (max-width: 1000px) {

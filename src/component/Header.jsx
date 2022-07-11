@@ -14,7 +14,9 @@ const Header = (props) => {
           <a href="#Contact">Contact</a>
         </li>
       </nav>
-      <div className="banner-image" />
+      <div className="image-holder">
+        <div className="banner-image" />
+      </div>
       {/* Add credit to picture */}
     </header>
   );

@@ -37,6 +37,7 @@ nav a:active {
 }
 
 .banner-image {
+  z-index: -1;
   height: 370px;
   width: 100%;
   background-image: url('../../assets/images/grey-landscape.jpg');
@@ -49,7 +50,7 @@ nav a:active {
   content: '';
   display: block;
   position: absolute;
-  z-index: 2;
+  z-index: 0;
   width: inherit;
   height: inherit;
   background-color: rgba(255, 255, 255, 0.25);
