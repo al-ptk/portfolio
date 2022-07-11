@@ -5,7 +5,13 @@
 }
 
 #Projects h1 {
-  font-size: 56px;
+  font-size: 6.4rem;
   font-weight: 300;
-  margin-bottom: 60px;
+  margin-bottom: 6rem;
+}
+
+@media (max-width: 500px) {
+  #Projects h1 {
+    font-size: 5.6rem;
+  }
 }

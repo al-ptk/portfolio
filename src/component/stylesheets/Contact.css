@@ -1,25 +1,30 @@
 #Contact {
   max-width: 800px;
   height: 600px;
-  margin-bottom: 20vh;
+  margin-bottom: 20vw;
 }
 
 #Contact h1 {
-  font-size: 64px;
+  font-size: 6rem;
   font-weight: 300;
+  text-align: center;
 }
 
 #Contact ul {
-  margin: 190px auto;
+  margin: 0 auto;
+  margin-top: 100px;
   display: flex;
   flex-flow: row wrap;
   width: 90%;
-  justify-content: space-between;
+  justify-content: center;
+  gap: 50px;
 }
 
 .contact-item {
   list-style: none;
   transition: transform 0.1s ease-in-out;
+  width: 30%;
+  max-width: 145px;
 }
 
 .contact-item:hover {
@@ -33,8 +38,9 @@
   align-items: center;
   gap: 20px;
   color: black;
+  font-size: 2rem;
 }
 
 .contact-item img {
-  width: 130px;
+  width: 100%;
 }

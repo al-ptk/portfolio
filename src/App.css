@@ -1,13 +1,24 @@
+:root {
+  font-size: 10px;
+}
+
 .App {
   background-color: #eee;
 }
 
 main > section {
-  margin: 35vh auto;
+  margin: 0 auto;
+  margin-top: 30vh;
 }
 
-@media (max-width: 500px) {
-  main > section {
-    margin: 10vh auto;
+@media (max-width: 1000px) {
+  :root {
+    font-size: 8px;
+  }
+}
+
+@media (max-width: 1000px) {
+  :root {
+    font-size: 7px;
   }
 }

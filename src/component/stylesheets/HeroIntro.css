@@ -4,12 +4,11 @@
   display: flex;
   justify-content: center;
   flex-wrap: wrap;
-  font-size: 10px;
 }
 
 .hero-intro h1 {
   font-weight: 600;
-  font-size: 6.4em;
+  font-size: 6.4rem;
   max-width: 15ch;
 }
 
@@ -31,7 +30,7 @@
 }
 
 .hero-description p {
-  font-size: 2.6em;
+  font-size: 2.6rem;
   font-weight: 300;
   max-width: 450px;
 }
@@ -39,16 +38,9 @@
 @media (max-width: 1000px) {
   .hero-intro {
     max-width: 100%;
-    font-size: 8px;
   }
 
   .hero-description {
     max-width: 80%;
-  }
-}
-
-@media (max-width: 500px) {
-  .hero-intro {
-    font-size: 8px;
   }
 }

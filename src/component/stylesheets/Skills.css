@@ -10,7 +10,7 @@
 #Skills h1 {
   width: 100%;
   margin-bottom: 30px;
-  font-size: 56px;
+  font-size: 5.6rem;
   font-weight: 300;
   text-align: center;
 }
@@ -24,6 +24,7 @@
 
 .bullet-list h2 {
   font-weight: 600;
+  font-size: 4rem;
 }
 
 .bullet-item {
@@ -35,6 +36,7 @@
   max-width: 250px;
   opacity: 0;
   transition: opacity 0.6s ease-in-out;
+  font-size: 2rem;
 }
 
 .bullet-item h3 {
