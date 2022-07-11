@@ -6,15 +6,22 @@ const ProjectCarousel = (props) => {
   const [index, setIndex] = useState(0);
   const carousel = useRef(null);
 
-  const getPicWidth = () => {
-    return document.querySelector('.project-card img').width;
+  const getPadLeft = () => {
+    let result;
+    const imgWidth = document.querySelector('.project-card img').width;
+    const windowWidth = window.innerWidth;
+    const imgBuffer = index * (imgWidth + 100);
+    result = Math.floor(windowWidth / 2 - imgWidth / 2) - imgBuffer;
+    return result;
   };
 
   const centerCurrent = () => {
-    carousel.current.style.left = `calc(25vw - ${
-      (getPicWidth() + 100) * index
-    }px)`;
+    carousel.current.style.transform = `translateX(${getPadLeft()}px)`;
   };
+
+  useEffect(() => {
+    window.addEventListener('resize', () => centerCurrent());
+  }, []);
 
   useEffect(() => {
     centerCurrent();
@@ -30,13 +37,29 @@ const ProjectCarousel = (props) => {
         </div>
       </div>
       <div className="CarouselController">
-        <button className="move-left">{'<'}</button>
+        <button
+          className="move-left"
+          onClick={() => {
+            if (!index) return;
+            setIndex(index - 1);
+          }}
+        >
+          {'<'}
+        </button>
         {getProjects().map((props, index) => (
           <button key={index} id={`b${index}`} onClick={() => setIndex(index)}>
             {index}
           </button>
         ))}
-        <button className="move-right">{'>'}</button>
+        <button
+          className="move-right"
+          onClick={() => {
+            if (index === getProjects().length - 1) return;
+            setIndex(index + 1);
+          }}
+        >
+          {'>'}
+        </button>
       </div>
     </div>
   );
