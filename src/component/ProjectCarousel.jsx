@@ -6,7 +6,7 @@ const ProjectCarousel = (props) => {
   const [index, setIndex] = useState(0);
   const carousel = useRef(null);
 
-  const getPadLeft = () => {
+  const getPadLeft = (index) => {
     let result;
     const imgWidth = document.querySelector('.project-card img').width;
     const windowWidth = window.innerWidth;
@@ -15,17 +15,20 @@ const ProjectCarousel = (props) => {
     return result;
   };
 
-  const centerCurrent = () => {
-    carousel.current.style.transform = `translateX(${getPadLeft()}px)`;
+  const centerCurrent = (index) => {
+    carousel.current.style.transform = `translateX(${getPadLeft(index)}px)`;
   };
 
   useEffect(() => {
-    window.addEventListener('resize', () => centerCurrent());
+    window.addEventListener('resize', () => {
+      const currIdx = document.querySelector('button.idxActive').textContent;
+      centerCurrent(currIdx);
+    });
   }, []);
 
   useEffect(() => {
-    centerCurrent();
-  }, [index]);
+    centerCurrent(index);
+  });
 
   return (
     <div>
