@@ -11,18 +11,18 @@ const Skills = (props) => {
         #Skills {
           position: relative;
           max-width: 800px;
-          margin: 200px auto;
+          height: 50vh;
           display: flex;
           flex-flow: row wrap;
           justify-content: space-between;
         }
 
         #Skills h1 {
-          position: absolute;
+          width: 100%;
+          margin-bottom: 30px;
           font-size: 56px;
           font-weight: 300;
-          top: -1.7em;
-          left: 33px;
+          text-align: center;
         }
 
         #Skills section {
@@ -99,7 +99,7 @@ const BulletItem = ({ iconPath, iconAlt, title, animationStart }) => {
 
   useEffect(() => {
     setOffAnimation(bullet, animationStart);
-  }, []);
+  }, [animationStart]);
 
   return (
     <li className="bullet-item" ref={bullet}>

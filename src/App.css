@@ -1,3 +1,7 @@
 .App {
   background-color: #eee;
 }
+
+main>section {
+  margin: 35vh auto;
+}

@@ -14,6 +14,7 @@ const Projects = (props) => {
         #Projects h1 {
           font-size: 56px;
           font-weight: 300;
+          margin-bottom: 30px;
         }
         `}
       </style>

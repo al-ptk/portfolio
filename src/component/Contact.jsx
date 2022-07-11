@@ -8,15 +8,11 @@ const Contact = (props) => {
         #Contact {
           max-width: 800px;
           height: 600px;
-          margin: 100px auto;
         }
 
         #Contact h1 {
-          position: absolute;
-          left: 40px;
           font-size: 64px;
           font-weight: 300;
-          max-width: 15ch;
         }
 
         #Contact ul {
