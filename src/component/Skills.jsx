@@ -1,6 +1,7 @@
 import { getLanguages } from '../data/languageData';
 import { getTechs } from '../data/technologiesData';
 import { getMeths } from '../data/methodologiesData';
+import { useEffect, useRef } from 'react';
 
 const Skills = (props) => {
   return (
@@ -35,11 +36,14 @@ const Skills = (props) => {
         }
 
         .bullet-item {
+          position: relative;
           list-style: none;
           display: flex;
           align-items: center;
           gap: 10px;
           max-width: 250px;
+          opacity: 0;
+          transition: opacity .6s ease-in-out;
         }
 
         .bullet-item h3 {
@@ -57,28 +61,48 @@ const Skills = (props) => {
       <section className="languages">
         <h2>Languages:</h2>
         {getLanguages().map((props, index) => (
-          <BulletItem key={index} {...props} />
+          <BulletItem key={index} {...props} animationStart={index} />
         ))}
       </section>
       <section className="technologies">
         <h2>Technologies:</h2>
         {getTechs().map((props, index) => (
-          <BulletItem key={index} {...props} />
+          <BulletItem
+            key={index}
+            {...props}
+            animationStart={index + getLanguages().length}
+          />
         ))}
       </section>
       <section className="methodologies">
         <h2>Methodologies</h2>
         {getMeths().map((props, index) => (
-          <BulletItem key={index} {...props} />
+          <BulletItem
+            key={index}
+            {...props}
+            animationStart={index + getLanguages().length + getTechs().length}
+          />
         ))}
       </section>
     </section>
   );
 };
 
-const BulletItem = ({ iconPath, iconAlt, title }) => {
+const setOffAnimation = (bullet, animationStart) => {
+  setTimeout(() => {
+    bullet.current.style.opacity = 1;
+  }, 500 + animationStart * 600);
+};
+
+const BulletItem = ({ iconPath, iconAlt, title, animationStart }) => {
+  const bullet = useRef(null);
+
+  useEffect(() => {
+    setOffAnimation(bullet, animationStart);
+  }, []);
+
   return (
-    <li className="bullet-item">
+    <li className="bullet-item" ref={bullet}>
       <img src={iconPath} alt={iconAlt} className="bullet-image" />
       <h3 className="bullet-title">{title}</h3>
     </li>

@@ -28,6 +28,11 @@ const Contact = (props) => {
 
         .contact-item {
           list-style: none;
+          transition: transform .1s ease-in-out;
+        }
+
+        .contact-item:hover {
+          transform: scale(1.15);
         }
 
         .contact-item a {
