@@ -1,12 +1,43 @@
+import { useEffect, useRef, useState } from 'react';
 import { getProjects } from '../data/projectsData';
 import './stylesheets/ProjectCarousel.css';
 
 const ProjectCarousel = (props) => {
+  const [index, setIndex] = useState(0);
+  const carousel = useRef(null);
+
+  const getPicWidth = () => {
+    return document.querySelector('.project-card img').width;
+  };
+
+  const centerCurrent = () => {
+    carousel.current.style.left = `calc(25vw - ${
+      (getPicWidth() + 100) * index
+    }px)`;
+  };
+
+  useEffect(() => {
+    centerCurrent();
+  }, [index]);
+
   return (
-    <div className="ProjectCarousel">
-      {getProjects().map((props, index) => (
-        <ProjectCard key={index} {...props} />
-      ))}
+    <div>
+      <div className="ProjectCarousel">
+        <div className="innerContainer" ref={carousel}>
+          {getProjects().map((props, index) => (
+            <ProjectCard key={index} {...props} />
+          ))}
+        </div>
+      </div>
+      <div className="CarouselController">
+        <button className="move-left">{'<'}</button>
+        {getProjects().map((props, index) => (
+          <button key={index} id={`b${index}`} onClick={() => setIndex(index)}>
+            {index}
+          </button>
+        ))}
+        <button className="move-right">{'>'}</button>
+      </div>
     </div>
   );
 };

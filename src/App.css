@@ -4,6 +4,7 @@
 
 .App {
   background-color: #eee;
+  overflow-x: hidden;
 }
 
 main > section {
