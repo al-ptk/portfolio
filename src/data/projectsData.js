@@ -1,27 +1,32 @@
+import battleshipSnap from '../assets/images/project-pics/battleship.png';
+import yeOldSnap from '../assets/images/project-pics/yeOldMemories.png';
+import burguerSnap from '../assets/images/project-pics/burgerBay.png';
+import dashboardSnap from '../assets/images/project-pics/dashboard.png'
+
 const projects = [
   {
     title: 'Landing Page',
-    imagePath: '#',
+    imagePath: burguerSnap,
     imageAlt: 'Landing Page screenshot',
-    linkURL: '#',
+    linkURL: 'https://al-ptk.github.io/odin-restaurant/',
   },
   {
     title: 'Dashboard',
-    imagePath: '#',
+    imagePath: dashboardSnap,
     imageAlt: 'Dashboard page screenshot',
-    linkURL: '#',
+    linkURL: 'https://al-ptk.github.io/odin-dashboard/',
   },
   {
     title: 'Battleship',
-    imagePath: '#',
+    imagePath: battleshipSnap,
     imageAlt: 'Battleship game screenshot',
-    linkURL: '#',
+    linkURL: 'https://al-ptk.github.io/odin-battleship/',
   },
   {
     title: "Ye Ol' Memories",
-    imagePath: '#',
+    imagePath: yeOldSnap,
     imageAlt: 'Ye Ol Memories game screenshot',
-    linkURL: '#',
+    linkURL: 'https://al-ptk.github.io/odin-memory-game/',
   },
 ];
 
