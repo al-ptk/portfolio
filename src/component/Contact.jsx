@@ -1,10 +1,12 @@
+import { useTranslation } from 'react-i18next';
 import { getContact } from '../data/contactData';
 import './stylesheets/Contact.css';
 
 const Contact = (props) => {
+  const { t } = useTranslation();
   return (
     <section id="Contact">
-      <h1>You can find me at:</h1>
+      <h1>{t("ContactSectionTitle")}</h1>
       <ul>
         {getContact().map((props, index) => (
           <ContactChannel key={index} {...props} />
