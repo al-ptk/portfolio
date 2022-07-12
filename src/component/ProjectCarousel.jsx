@@ -87,7 +87,11 @@ const ProjectCard = ({ title, imagePath, imageAlt, linkURL }) => {
   return (
     <section className="project-card">
       <a href={linkURL} target="_blank" rel="noreferrer">
-        <img src={imagePath === '#' ? getRandom() : imagePath} alt={imageAlt} />
+        <img
+          src={imagePath === '#' ? getRandom() : imagePath}
+          alt={imageAlt}
+          aria-hidden="true"
+        />
         <h2>{title}</h2>
       </a>
     </section>

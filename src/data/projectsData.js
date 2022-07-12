@@ -7,7 +7,7 @@ const projects = [
   {
     title: 'Burger Bay',
     imagePath: burguerSnap,
-    imageAlt: 'Landing Page screenshot',
+    imageAlt: 'Burger Bay screenshot',
     linkURL: 'https://al-ptk.github.io/odin-restaurant/',
   },
   {

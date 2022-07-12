@@ -16,7 +16,7 @@ const HeroIntro = (props) => {
   return (
     <div className="hero-holder">
       <section className="hero-intro">
-        <img src={bioPic} alt="Alan Patrick, Web Developer" />
+        <img src={bioPic} alt={t('MainPicAlt')} />
         <div className="hero-description">
           <h1>
             {t('greetingTop')}{' '}

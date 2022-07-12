@@ -28,7 +28,7 @@ nav a {
   display: grid;
   place-items: center;
   height: 60px;
-  width: 100%;
+  min-width: fit-content;
 
   text-decoration: none;
   font-weight: 400;

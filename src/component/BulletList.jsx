@@ -41,7 +41,12 @@ const BulletItem = ({ iconPath, iconAlt, title, animationStart }) => {
 
   return (
     <li className="bullet-item" ref={self}>
-      <img src={iconPath} alt={iconAlt} className="bullet-image" />
+      <img
+        src={iconPath}
+        alt={iconAlt}
+        className="bullet-image"
+        aria-hidden="true"
+      />
       <h3 className="bullet-title">{title}</h3>
     </li>
   );
