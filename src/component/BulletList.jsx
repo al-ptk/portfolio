@@ -1,4 +1,4 @@
-import { useEffect, useRef } from 'react';
+import { useCallback, useEffect, useRef } from 'react';
 
 const Bulletlist = ({ title, propsList, animationStart }) => {
   return (
@@ -19,10 +19,9 @@ const Bulletlist = ({ title, propsList, animationStart }) => {
 
 const BulletItem = ({ iconPath, iconAlt, title, animationStart }) => {
   const self = useRef(null);
-  
-  const setAnimationOff = () => {
+
+  const setAnimationOff = useCallback(() => {
     let skills = document.querySelector('#Skills');
-    console.log('scrolling');
     if (window.scrollY >= skills.offsetTop - 500) {
       // Gets timing for each instance to transition
       const customTiming = animationStart * 600;
@@ -34,11 +33,11 @@ const BulletItem = ({ iconPath, iconAlt, title, animationStart }) => {
 
       window.removeEventListener('scroll', setAnimationOff);
     }
-  };
+  }, [animationStart]);
 
   useEffect(() => {
-    let listener = window.addEventListener('scroll', setAnimationOff);
-  }, []);
+    window.addEventListener('scroll', setAnimationOff);
+  }, [setAnimationOff]);
 
   return (
     <li className="bullet-item" ref={self}>
