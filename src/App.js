@@ -1,4 +1,5 @@
 import './App.css';
+import './i18n';
 import Header from './component/Header';
 import HeroIntro from './component/HeroIntro';
 import Skills from './component/Skills';

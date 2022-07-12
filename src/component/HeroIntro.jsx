@@ -1,12 +1,15 @@
 import { useEffect } from 'react';
+import { useTranslation } from 'react-i18next';
 import bioPic from '../assets/images/github-pic.jpg';
 import './stylesheets/HeroIntro.css';
 
 const HeroIntro = (props) => {
+  const { t } = useTranslation();
+
   useEffect(() => {
     ['.hero-description p', '.hero-intro img', '.hero-intro h1'].forEach(
       (selector) => {
-        document.querySelector(selector).classList.add('show')
+        document.querySelector(selector).classList.add('show');
       }
     );
   }, []);
@@ -16,16 +19,13 @@ const HeroIntro = (props) => {
         <img src={bioPic} alt="Alan Patrick, Web Developer" />
         <div className="hero-description">
           <h1>
-            Hello there!{' '}
-            <span>
-              I'm{' '}
+            {t('greetingTop')}{' '}
+            <div>
+              {t('greetingBottom')}{' '}
               <span style={{ color: '#756E6E', fontWeight: 600 }}>Alan</span>.
-            </span>
+            </div>
           </h1>
-          <p>
-            &nbsp; I'm a Brazillian Front-End developer, working hard to bring
-            forth aweomse web solutions.
-          </p>
+          <p>&nbsp;{t('bioDescription')}</p>
         </div>
       </section>
     </div>

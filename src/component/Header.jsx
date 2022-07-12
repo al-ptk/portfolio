@@ -1,19 +1,38 @@
 import './stylesheets/Header.css';
+import brazilFlag from '../assets/images/flags/brazil_round_icon_64.png';
+import UKflag from '../assets/images/flags/united_kingdom_round_icon_64.png';
+import i18n from '../i18n';
+import { useTranslation } from 'react-i18next';
+
+const changeLanguage = (lng) => {
+  return () => i18n.changeLanguage(`${lng}`);
+};
 
 const Header = (props) => {
+  const { t } = useTranslation();
   return (
     <header>
-      <nav>
-        <li>
-          <a href="#Skills">Skills</a>
-        </li>
-        <li>
-          <a href="#Projects">Projects</a>
-        </li>
-        <li>
-          <a href="#Contact">Contact</a>
-        </li>
-      </nav>
+      <div className="header-bar">
+        <div>
+          <button onClick={changeLanguage('pt')}>
+            <img src={brazilFlag} alt="PT" />
+          </button>
+          <button onClick={changeLanguage('en')}>
+            <img src={UKflag} alt="EN" />
+          </button>
+        </div>
+        <nav>
+          <li>
+            <a href="#Skills">{t('Skills')}</a>
+          </li>
+          <li>
+            <a href="#Projects">{t('Projects')}</a>
+          </li>
+          <li>
+            <a href="#Contact">{t('Contact')}</a>
+          </li>
+        </nav>
+      </div>
       <div className="image-holder">
         <div className="banner-image" />
       </div>

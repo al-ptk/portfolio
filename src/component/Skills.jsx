@@ -3,19 +3,25 @@ import { getTechs } from '../data/technologiesData';
 import { getMeths } from '../data/methodologiesData';
 import Bulletlist from './BulletList';
 import './stylesheets/Skills.css';
+import { useTranslation } from 'react-i18next';
 
 const Skills = (props) => {
+  const { t } = useTranslation();
   return (
     <section id="Skills">
-      <h1>I work with:</h1>
-      <Bulletlist title="Languages" propsList={getLanguages()} animationStart={0} />
+      <h1>{t('SkillsSectionTitle')}</h1>
       <Bulletlist
-        title="Technologies"
+        title={t('Languages')}
+        propsList={getLanguages()}
+        animationStart={0}
+      />
+      <Bulletlist
+        title={t('Technologies')}
         propsList={getTechs()}
         animationStart={getLanguages().length}
       />
       <Bulletlist
-        title="Methodologies"
+        title={t('Methodologies')}
         propsList={getMeths()}
         animationStart={getLanguages().length + getTechs().length}
       />

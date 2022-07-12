@@ -1,11 +1,11 @@
 import battleshipSnap from '../assets/images/project-pics/battleship.png';
 import yeOldSnap from '../assets/images/project-pics/yeOldMemories.png';
 import burguerSnap from '../assets/images/project-pics/burgerBay.png';
-import dashboardSnap from '../assets/images/project-pics/dashboard.png'
+import dashboardSnap from '../assets/images/project-pics/dashboard.png';
 
 const projects = [
   {
-    title: 'Landing Page',
+    title: 'Burger Bay',
     imagePath: burguerSnap,
     imageAlt: 'Landing Page screenshot',
     linkURL: 'https://al-ptk.github.io/odin-restaurant/',
