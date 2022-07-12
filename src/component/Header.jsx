@@ -13,6 +13,23 @@ const Header = (props) => {
   return (
     <header>
       <div className="header-bar">
+        <button
+          className="burger-button"
+          onClick={() => {
+            document.querySelector('.header-bar').classList.toggle('show');
+          }}
+        >
+          <svg
+            viewBox="0 0 100 65"
+            width="30"
+            height="30"
+            fill="rgba(0, 0, 0,.5)"
+          >
+            <rect width="100" height="15"></rect>
+            <rect y="30" width="100" height="15"></rect>
+            <rect y="60" width="100" height="15"></rect>
+          </svg>
+        </button>
         <div>
           <button
             aria-label="Mudar para Português"
@@ -26,9 +43,7 @@ const Header = (props) => {
         </div>
         <nav>
           <li>
-            <a href="#Skills">
-              {t('Skills')}
-            </a>
+            <a href="#Skills">{t('Skills')}</a>
           </li>
           <li>
             <a href="#Projects">{t('Projects')}</a>
