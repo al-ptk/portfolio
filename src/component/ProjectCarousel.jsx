@@ -1,4 +1,4 @@
-import { useEffect, useRef, useState } from 'react';
+import { useCallback, useEffect, useRef, useState } from 'react';
 import { getProjects } from '../data/projectsData';
 import './stylesheets/ProjectCarousel.css';
 
@@ -15,9 +15,9 @@ const ProjectCarousel = (props) => {
     return result;
   };
 
-  const centerCurrent = (index) => {
+  const centerCurrent = useCallback((index) => {
     carousel.current.style.transform = `translateX(${getPadLeft(index)}px)`;
-  };
+  }, []);
 
   useEffect(() => {
     window.addEventListener('resize', () => {
@@ -32,7 +32,7 @@ const ProjectCarousel = (props) => {
       }
     };
     window.addEventListener('scroll', scrollBack);
-  }, []);
+  }, [centerCurrent]);
 
   useEffect(() => {
     centerCurrent(index);
