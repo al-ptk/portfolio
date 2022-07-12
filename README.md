@@ -1,6 +1,6 @@
 # Bem-vindo ao meu portfolio!
 
-[**>> Site pessoal (em construção) <<**](#)
+[**>> Veja ao vivo! <<**](https://al-ptk.github.io/portfolio/)
 
 ## Projetos (do mais recente ao mais antigo)
 
