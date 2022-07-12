@@ -26,7 +26,7 @@ const Header = (props) => {
         </div>
         <nav>
           <li>
-            <a style={{ maxWidth: '80%' }} href="#Skills">
+            <a href="#Skills">
               {t('Skills')}
             </a>
           </li>
