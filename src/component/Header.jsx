@@ -14,10 +14,13 @@ const Header = (props) => {
     <header>
       <div className="header-bar">
         <div>
-          <button onClick={changeLanguage('pt')}>
+          <button
+            aria-label="Mudar para Português"
+            onClick={changeLanguage('pt')}
+          >
             <img src={brazilFlag} alt="PT" />
           </button>
-          <button onClick={changeLanguage('en')}>
+          <button aria-label="Switch to English" onClick={changeLanguage('en')}>
             <img src={UKflag} alt="EN" />
           </button>
         </div>

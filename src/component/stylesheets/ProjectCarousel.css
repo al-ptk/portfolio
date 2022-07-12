@@ -13,6 +13,10 @@
   transition: transform 1s ease-in-out;
 }
 
+.project-card {
+  list-style: none;
+}
+
 .project-card a {
   display: flex;
   flex-direction: column;

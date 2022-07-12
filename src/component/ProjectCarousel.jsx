@@ -41,13 +41,13 @@ const ProjectCarousel = (props) => {
   return (
     <div>
       <div className="ProjectCarousel">
-        <div className="innerContainer" ref={carousel}>
+        <ul className="innerContainer" ref={carousel}>
           {getProjects().map((props, index) => (
             <ProjectCard key={index} {...props} />
           ))}
-        </div>
+        </ul>
       </div>
-        <CarouselController {...{index, setIndex}} />
+      <CarouselController {...{ index, setIndex }} />
     </div>
   );
 };
@@ -57,7 +57,7 @@ const getRandom = () =>
 
 const ProjectCard = ({ title, imagePath, imageAlt, linkURL }) => {
   return (
-    <section className="project-card">
+    <li className="project-card">
       <a href={linkURL} target="_blank" rel="noreferrer">
         <img
           src={imagePath === '#' ? getRandom() : imagePath}
@@ -66,14 +66,15 @@ const ProjectCard = ({ title, imagePath, imageAlt, linkURL }) => {
         />
         <h2>{title}</h2>
       </a>
-    </section>
+    </li>
   );
 };
 
-const CarouselController = ({setIndex, index}) => {
+const CarouselController = ({ setIndex, index }) => {
   return (
     <div className="CarouselController">
       <button
+        aria-label="Move Carousel to left"
         className="move-left"
         onClick={() => {
           if (!index) return;
@@ -85,6 +86,7 @@ const CarouselController = ({setIndex, index}) => {
       {getProjects().map((props, listIndex) => (
         <button
           key={listIndex}
+          aria-label={`Move Carousel to ${props.title}`}
           className={listIndex === index ? 'idxActive' : ''}
           onClick={() => setIndex(listIndex)}
         >
@@ -92,6 +94,7 @@ const CarouselController = ({setIndex, index}) => {
         </button>
       ))}
       <button
+        aria-label="Move Carousel to right"
         className="move-right"
         onClick={() => {
           if (index === getProjects().length - 1) return;
