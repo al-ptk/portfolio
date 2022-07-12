@@ -47,35 +47,7 @@ const ProjectCarousel = (props) => {
           ))}
         </div>
       </div>
-      <div className="CarouselController">
-        <button
-          className="move-left"
-          onClick={() => {
-            if (!index) return;
-            setIndex(index - 1);
-          }}
-        >
-          {'<'}
-        </button>
-        {getProjects().map((props, listIndex) => (
-          <button
-            key={listIndex}
-            className={listIndex === index ? 'idxActive' : ''}
-            onClick={() => setIndex(listIndex)}
-          >
-            {listIndex}
-          </button>
-        ))}
-        <button
-          className="move-right"
-          onClick={() => {
-            if (index === getProjects().length - 1) return;
-            setIndex(index + 1);
-          }}
-        >
-          {'>'}
-        </button>
-      </div>
+        <CarouselController {...{index, setIndex}} />
     </div>
   );
 };
@@ -95,6 +67,40 @@ const ProjectCard = ({ title, imagePath, imageAlt, linkURL }) => {
         <h2>{title}</h2>
       </a>
     </section>
+  );
+};
+
+const CarouselController = ({setIndex, index}) => {
+  return (
+    <div className="CarouselController">
+      <button
+        className="move-left"
+        onClick={() => {
+          if (!index) return;
+          setIndex(index - 1);
+        }}
+      >
+        {'<'}
+      </button>
+      {getProjects().map((props, listIndex) => (
+        <button
+          key={listIndex}
+          className={listIndex === index ? 'idxActive' : ''}
+          onClick={() => setIndex(listIndex)}
+        >
+          {listIndex}
+        </button>
+      ))}
+      <button
+        className="move-right"
+        onClick={() => {
+          if (index === getProjects().length - 1) return;
+          setIndex(index + 1);
+        }}
+      >
+        {'>'}
+      </button>
+    </div>
   );
 };
 
