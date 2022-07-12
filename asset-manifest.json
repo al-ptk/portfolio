@@ -1,0 +1,31 @@
+{
+  "files": {
+    "main.css": "/portfolio/static/css/main.60dad6e9.css",
+    "main.js": "/portfolio/static/js/main.8da7241f.js",
+    "static/media/burgerBay.png": "/portfolio/static/media/burgerBay.0ae55f1ea505bef44b73.png",
+    "static/media/grey-landscape.jpg": "/portfolio/static/media/grey-landscape.54acf6807c53dc5fbf6f.jpg",
+    "static/media/Lato-Semibold.ttf": "/portfolio/static/media/Lato-Semibold.d585c7df44df3024c49b.ttf",
+    "static/media/Lato-Regular.ttf": "/portfolio/static/media/Lato-Regular.80c07943565d91b976e1.ttf",
+    "static/media/Lato-Light.ttf": "/portfolio/static/media/Lato-Light.d92647541fd5192917e0.ttf",
+    "static/media/Lato-Medium.ttf": "/portfolio/static/media/Lato-Medium.dffae17524847ef31d01.ttf",
+    "static/media/Lato-Thin.ttf": "/portfolio/static/media/Lato-Thin.6734a19bb785bf18bc64.ttf",
+    "static/media/yeOldMemories.png": "/portfolio/static/media/yeOldMemories.eb457107583f92e3e9f2.png",
+    "static/media/github-pic.jpg": "/portfolio/static/media/github-pic.1203e04b3d16f7f5e0c2.jpg",
+    "static/media/dashboard.png": "/portfolio/static/media/dashboard.b3b9f5fe17477fadec6e.png",
+    "static/media/linkedin-icon.png": "/portfolio/static/media/linkedin-icon.66ffd29ac1bb3de67249.png",
+    "static/media/email-icon.png": "/portfolio/static/media/email-icon.c93fbf4e25e922eb559d.png",
+    "static/media/react-icon.png": "/portfolio/static/media/react-icon.283bf42c605cfc49cf49.png",
+    "static/media/firebase-icon.png": "/portfolio/static/media/firebase-icon.d7d5280a96555604fff5.png",
+    "static/media/whatsapp-icon.png": "/portfolio/static/media/whatsapp-icon.1dd8ca2765f1f177ab22.png",
+    "static/media/jest-icon.jpg": "/portfolio/static/media/jest-icon.7b3bd334eb1b2a12cbf6.jpg",
+    "static/media/figma-icon.png": "/portfolio/static/media/figma-icon.72fbc535ebe253a5dbc4.png",
+    "static/media/battleship.png": "/portfolio/static/media/battleship.895d600335b46d018fe7.png",
+    "index.html": "/portfolio/index.html",
+    "main.60dad6e9.css.map": "/portfolio/static/css/main.60dad6e9.css.map",
+    "main.8da7241f.js.map": "/portfolio/static/js/main.8da7241f.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.60dad6e9.css",
+    "static/js/main.8da7241f.js"
+  ]
+}
