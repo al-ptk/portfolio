@@ -26,6 +26,10 @@ const technologies = [
   },
 ];
 
+/**
+ * Learn Tailwind
+ */
+
 const getTechs = () => technologies;
 
 export { getTechs };

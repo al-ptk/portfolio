@@ -54,8 +54,8 @@ const Header = (props) => {
       </div>
       <div className="image-holder">
         <div className="banner-image" />
+        {/* Add credit to picture */}
       </div>
-      {/* Add credit to picture */}
     </header>
   );
 };

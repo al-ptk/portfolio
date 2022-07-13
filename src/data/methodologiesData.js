@@ -8,6 +8,11 @@ const methodologies = [
   },
 ];
 
+/**
+ * Add BEM
+ * Add a11y stuff
+ */
+
 const getMeths = () => methodologies;
 
 export { getMeths };

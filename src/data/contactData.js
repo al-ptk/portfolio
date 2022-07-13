@@ -20,13 +20,13 @@ const contact = [
     title: 'E-mail',
     iconPath: emailIcon,
     iconAlt: 'E-mail icon',
-    linkPath: '#',
+    linkPath: 'alan.patrick.fv@gmail.com',
   },
   {
     title: 'Whatsapp',
     iconPath: whatsappIcon,
     iconAlt: 'Whatsapp icon',
-    linkPath: '#',
+    linkPath: 'https://wa.me/5521980016371',
   },
 ];
 
