@@ -1,8 +1,9 @@
 const getRandom = () =>
   `https://picsum.photos/400/350?random=${Math.floor(Math.random() * 100)}`;
-export const ProjectCard = ({ title, imagePath, imageAlt, linkURL }) => {
+
+const ProjectCard = ({ title, imagePath, imageAlt, linkURL, focused }) => {
   return (
-    <li className="project-card">
+    <li onFocus={focused} className="project-card">
       <a href={linkURL} target="_blank" rel="noreferrer">
         <img
           src={imagePath === '#' ? getRandom() : imagePath}
@@ -14,3 +15,5 @@ export const ProjectCard = ({ title, imagePath, imageAlt, linkURL }) => {
     </li>
   );
 };
+
+export default ProjectCard;

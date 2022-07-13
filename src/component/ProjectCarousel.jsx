@@ -1,7 +1,7 @@
 import { useCallback, useEffect, useRef, useState } from 'react';
 import { getProjects } from '../data/projectsData';
 import { CarouselController } from './CarouselController';
-import { ProjectCard } from './getRandom';
+import ProjectCard from './ProjectCard';
 import './stylesheets/ProjectCarousel.css';
 
 const ProjectCarousel = (props) => {
@@ -21,11 +21,6 @@ const ProjectCarousel = (props) => {
   const centerCurrent = useCallback((index) => {
     carousel.current.style.transform = `translateX(${getPadLeft(index)}px)`;
   }, []);
-
-  const handleDrag = (e) => {
-    e.preventDefault();
-    console.log(e);
-  };
 
   useEffect(() => {
     window.addEventListener('resize', () => {
@@ -72,7 +67,11 @@ const ProjectCarousel = (props) => {
       >
         <ul className="innerContainer" ref={carousel}>
           {getProjects().map((props, index) => (
-            <ProjectCard key={index} {...props} focused={()=>setIndex(index)} />
+            <ProjectCard
+              key={index}
+              {...props}
+              focused={() => setIndex(index)}
+            />
           ))}
         </ul>
       </div>
