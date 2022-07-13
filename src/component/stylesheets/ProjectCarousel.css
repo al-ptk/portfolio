@@ -1,4 +1,5 @@
 .ProjectCarousel {
+  overflow-x: hidden;
   width: 100vw;
   padding: 100px 0px;
   background-color: #dedede;

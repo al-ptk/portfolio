@@ -1,5 +1,7 @@
 import { useCallback, useEffect, useRef, useState } from 'react';
 import { getProjects } from '../data/projectsData';
+import { CarouselController } from './CarouselController';
+import { ProjectCard } from './getRandom';
 import './stylesheets/ProjectCarousel.css';
 
 const ProjectCarousel = (props) => {
@@ -48,61 +50,6 @@ const ProjectCarousel = (props) => {
         </ul>
       </div>
       <CarouselController {...{ index, setIndex }} />
-    </div>
-  );
-};
-
-const getRandom = () =>
-  `https://picsum.photos/400/350?random=${Math.floor(Math.random() * 100)}`;
-
-const ProjectCard = ({ title, imagePath, imageAlt, linkURL }) => {
-  return (
-    <li className="project-card">
-      <a href={linkURL} target="_blank" rel="noreferrer">
-        <img
-          src={imagePath === '#' ? getRandom() : imagePath}
-          alt={imageAlt}
-          aria-hidden="true"
-        />
-        <h2>{title}</h2>
-      </a>
-    </li>
-  );
-};
-
-const CarouselController = ({ setIndex, index }) => {
-  return (
-    <div className="CarouselController">
-      <button
-        aria-label="Move Carousel to left"
-        className="move-left"
-        onClick={() => {
-          if (!index) return;
-          setIndex(index - 1);
-        }}
-      >
-        {'<'}
-      </button>
-      {getProjects().map((props, listIndex) => (
-        <button
-          key={listIndex}
-          aria-label={`Move Carousel to ${props.title}`}
-          className={listIndex === index ? 'idxActive' : ''}
-          onClick={() => setIndex(listIndex)}
-        >
-          {listIndex}
-        </button>
-      ))}
-      <button
-        aria-label="Move Carousel to right"
-        className="move-right"
-        onClick={() => {
-          if (index === getProjects().length - 1) return;
-          setIndex(index + 1);
-        }}
-      >
-        {'>'}
-      </button>
     </div>
   );
 };
