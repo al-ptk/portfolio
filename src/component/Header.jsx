@@ -4,12 +4,9 @@ import UKflag from '../assets/images/flags/united_kingdom_round_icon_64.png';
 import i18n from '../i18n';
 import { useTranslation } from 'react-i18next';
 
-const changeLanguage = (lng) => {
-  return () => i18n.changeLanguage(`${lng}`);
-};
-
 const Header = (props) => {
   const { t } = useTranslation();
+  const { setCurrLng } = props;
   return (
     <header>
       <div className="header-bar">
@@ -33,11 +30,14 @@ const Header = (props) => {
         <div>
           <button
             aria-label="Mudar para Português"
-            onClick={changeLanguage('pt')}
+            onClick={() => setCurrLng('pt')}
           >
             <img src={brazilFlag} alt="PT" />
           </button>
-          <button aria-label="Switch to English" onClick={changeLanguage('en')}>
+          <button
+            aria-label="Switch to English"
+            onClick={() => setCurrLng('en')}
+          >
             <img src={UKflag} alt="EN" />
           </button>
         </div>
