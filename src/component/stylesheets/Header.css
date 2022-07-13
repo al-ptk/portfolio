@@ -78,7 +78,7 @@ button.burger-button {
   left: -3px;
   top: 10px;
   font-size: 3.2rem;
-  border: 3px solid rgba(0, 0, 0, 0.5);
+  box-shadow: 0 0 3px 0 rgba(0,0,0,.7);
   border-radius: 5px;
 }
 
