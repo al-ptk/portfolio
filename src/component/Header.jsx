@@ -1,7 +1,6 @@
 import './stylesheets/Header.css';
 import brazilFlag from '../assets/images/flags/brazil_round_icon_64.png';
 import UKflag from '../assets/images/flags/united_kingdom_round_icon_64.png';
-import i18n from '../i18n';
 import { useTranslation } from 'react-i18next';
 
 const Header = (props) => {

@@ -67,7 +67,7 @@ button.move-right {
   height: 50px;
 }
 
-button.idxActive{
+button.idxActive {
   border: 2px solid rgb(187, 187, 187);
   background-color: #272727;
 }

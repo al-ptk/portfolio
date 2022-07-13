@@ -6,6 +6,7 @@ import './stylesheets/ProjectCarousel.css';
 
 const ProjectCarousel = (props) => {
   const [index, setIndex] = useState(getProjects().length - 1);
+  const [coords, setCoords] = useState(null);
   const carousel = useRef(null);
 
   const getPadLeft = (index) => {
@@ -20,6 +21,11 @@ const ProjectCarousel = (props) => {
   const centerCurrent = useCallback((index) => {
     carousel.current.style.transform = `translateX(${getPadLeft(index)}px)`;
   }, []);
+
+  const handleDrag = (e) => {
+    e.preventDefault();
+    console.log(e);
+  };
 
   useEffect(() => {
     window.addEventListener('resize', () => {
@@ -40,12 +46,33 @@ const ProjectCarousel = (props) => {
     centerCurrent(index);
   });
 
+  const captureCoords = (e) => {
+    setCoords(e.clientX || e.touches[0].clientX);
+  };
+
+  const scrollCarousel = (e) => {
+    let newCoord = e.clientX || e.changedTouches[0].clientX;
+    // Move carousel to the left
+    if (coords - newCoord < 0 && index > 0) setIndex(index - 1);
+
+    // Move carousel to the right
+    if (coords - newCoord > 0 && index < getProjects().length - 1)
+      setIndex(index + 1);
+  };
+
   return (
     <div>
-      <div className="ProjectCarousel">
+      <div
+        className="ProjectCarousel"
+        onMouseDown={captureCoords}
+        onMouseDownCapture={(e) => e.preventDefault()}
+        onMouseUp={scrollCarousel}
+        onTouchStart={captureCoords}
+        onTouchEnd={scrollCarousel}
+      >
         <ul className="innerContainer" ref={carousel}>
           {getProjects().map((props, index) => (
-            <ProjectCard key={index} {...props} />
+            <ProjectCard key={index} {...props} focused={()=>setIndex(index)} />
           ))}
         </ul>
       </div>
