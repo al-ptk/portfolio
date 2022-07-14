@@ -9,24 +9,28 @@ const projects = [
     imagePath: burguerSnap,
     imageAlt: 'Burger Bay screenshot',
     linkURL: 'https://al-ptk.github.io/odin-restaurant/',
+    sourceUrl: 'https://github.com/al-ptk/odin-restaurant',
   },
   {
     title: 'Dashboard',
     imagePath: dashboardSnap,
     imageAlt: 'Dashboard page screenshot',
     linkURL: 'https://al-ptk.github.io/odin-dashboard/',
+    sourceUrl: 'https://github.com/al-ptk/odin-dashboard',
   },
   {
     title: 'Battleship',
     imagePath: battleshipSnap,
     imageAlt: 'Battleship game screenshot',
     linkURL: 'https://al-ptk.github.io/odin-battleship/',
+    sourceUrl: 'https://github.com/al-ptk/odin-battleship',
   },
   {
     title: "Ye Ol' Memories",
     imagePath: yeOldSnap,
     imageAlt: 'Ye Ol Memories game screenshot',
     linkURL: 'https://al-ptk.github.io/odin-memory-game/',
+    sourceUrl: 'https://github.com/al-ptk/odin-memory-game',
   },
 ];
 

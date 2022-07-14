@@ -14,7 +14,7 @@ const contact = [
     title: 'Github',
     iconPath: githubIcon,
     iconAlt: 'Github icon',
-    linkPath: 'https://github.com/al-ptk',
+    linkPath: 'https://github.com/al-ptk/portfolio',
   },
   {
     title: 'E-mail',

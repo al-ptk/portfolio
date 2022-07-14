@@ -14,5 +14,7 @@
   "ContactSectionTitle": "You can find me at:",
   "FooterText": "Made by",
   "MainPicAlt": "Alan Patrick, Author of the Page",
-  "EmailAlert": "Coppied: "
+  "EmailAlert": "Coppied: ",
+  "LiveLink": "Go to website",
+  "SourceCode": "Go to source code"
 }

@@ -1,7 +1,7 @@
 .ProjectCarousel {
   overflow-x: hidden;
   width: 100vw;
-  padding: 100px 0px;
+  padding: 100px 0px 60px 0px;
   background-color: #dedede;
   box-shadow: inset 0px 4px 8px rgba(0, 0, 0, 0.25),
     inset 0px -4px 8px rgba(0, 0, 0, 0.25);
@@ -16,17 +16,38 @@
 
 .project-card {
   list-style: none;
-}
-
-.project-card a {
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 10px;
-  text-decoration: none;
+  gap: 20px;
+}
+
+.project-title {
   color: black;
   text-shadow: 0px 4px 3px rgba(0, 0, 0, 0.3);
-  font-size: 2rem;
+  font-size: 3.2rem;
+}
+
+.live-link {
+  font-size: 3.2rem;
+  background-color: white;
+  padding: 10px 25px;
+  border: 2px solid;
+  color: black;
+  border-radius: 10px;
+}
+
+.source-link {
+  font-size: 3.2rem;
+  background-color: black;
+  padding: 10px 25px;
+  border: 2px solid;
+  color: white;
+  border-radius: 10px;
+}
+
+.project-card a {
+  text-decoration: none;
 }
 
 .project-card img {
