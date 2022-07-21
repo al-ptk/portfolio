@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/portfolio/static/css/main.eb0de2e1.css",
-    "main.js": "/portfolio/static/js/main.20790b50.js",
+    "main.js": "/portfolio/static/js/main.225e6c33.js",
     "static/media/burgerBay.png": "/portfolio/static/media/burgerBay.0ae55f1ea505bef44b73.png",
     "static/media/grey-landscape.jpg": "/portfolio/static/media/grey-landscape.54acf6807c53dc5fbf6f.jpg",
     "static/media/Lato-Semibold.ttf": "/portfolio/static/media/Lato-Semibold.d585c7df44df3024c49b.ttf",
@@ -15,6 +15,7 @@
     "static/media/linkedin-icon.png": "/portfolio/static/media/linkedin-icon.66ffd29ac1bb3de67249.png",
     "static/media/email-icon.png": "/portfolio/static/media/email-icon.c93fbf4e25e922eb559d.png",
     "static/media/react-icon.png": "/portfolio/static/media/react-icon.283bf42c605cfc49cf49.png",
+    "static/media/brittania.webp": "/portfolio/static/media/brittania.62ebba9024dfe9d32866.webp",
     "static/media/firebase-icon.png": "/portfolio/static/media/firebase-icon.d7d5280a96555604fff5.png",
     "static/media/whatsapp-icon.png": "/portfolio/static/media/whatsapp-icon.1dd8ca2765f1f177ab22.png",
     "static/media/jest-icon.jpg": "/portfolio/static/media/jest-icon.7b3bd334eb1b2a12cbf6.jpg",
@@ -22,10 +23,10 @@
     "static/media/battleship.png": "/portfolio/static/media/battleship.895d600335b46d018fe7.png",
     "index.html": "/portfolio/index.html",
     "main.eb0de2e1.css.map": "/portfolio/static/css/main.eb0de2e1.css.map",
-    "main.20790b50.js.map": "/portfolio/static/js/main.20790b50.js.map"
+    "main.225e6c33.js.map": "/portfolio/static/js/main.225e6c33.js.map"
   },
   "entrypoints": [
     "static/css/main.eb0de2e1.css",
-    "static/js/main.20790b50.js"
+    "static/js/main.225e6c33.js"
   ]
 }
