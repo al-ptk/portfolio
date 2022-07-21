@@ -20,9 +20,16 @@ const ProjectCard = ({
         aria-hidden="true"
       />
       <h2 className="project-title">{title}</h2>
-      <a className="live-link" href={linkURL} target="_blank" rel="noreferrer">
-        {t('LiveLink')}
-      </a>
+      {linkURL !== '#' && (
+        <a
+          className="live-link"
+          href={linkURL}
+          target="_blank"
+          rel="noreferrer"
+        >
+          {t('LiveLink')}
+        </a>
+      )}
       <a
         className="source-link"
         href={sourceUrl}

@@ -11,6 +11,7 @@ const methodologies = [
 /**
  * Add BEM
  * Add a11y stuff
+ * Add mobile-first
  */
 
 const getMeths = () => methodologies;

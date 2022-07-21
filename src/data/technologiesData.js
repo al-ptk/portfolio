@@ -27,7 +27,7 @@ const technologies = [
 ];
 
 /**
- * Learn Tailwind
+ * Learn stlyed-components
  */
 
 const getTechs = () => technologies;
