@@ -4,6 +4,10 @@ import burguerSnap from '../assets/images/project-pics/burgerBay.png';
 import dashboardSnap from '../assets/images/project-pics/dashboard.png';
 import brittaniaSnap from '../assets/images/project-pics/brittania.webp'
 
+/*
+* Add the source code of this project
+*/
+
 const projects = [
   {
     title: 'Brittania',

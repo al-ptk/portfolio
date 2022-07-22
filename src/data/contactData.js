@@ -3,6 +3,10 @@ import githubIcon from '../assets/images/logos/github.png';
 import emailIcon from '../assets/images/logos/email-icon.png';
 import whatsappIcon from '../assets/images/logos/whatsapp-icon.png';
 
+/*
+ * Add Dev.to and Twiter
+ */
+
 const contact = [
   {
     title: 'Linkedin',
@@ -14,7 +18,7 @@ const contact = [
     title: 'Github',
     iconPath: githubIcon,
     iconAlt: 'Github icon',
-    linkPath: 'https://github.com/al-ptk/portfolio',
+    linkPath: 'https://github.com/al-ptk/',
   },
   {
     title: 'E-mail',

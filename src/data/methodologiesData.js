@@ -1,5 +1,11 @@
 import tddIcon from '../assets/images/logos/tdd-icon.png';
 
+/*
+ * Add BEM
+ * Add a11y stuff
+ * Add mobile-first
+ */
+
 const methodologies = [
   {
     title: 'Test-Driven Development',
@@ -7,12 +13,6 @@ const methodologies = [
     iconAlt: 'Test-Driven Development icon',
   },
 ];
-
-/**
- * Add BEM
- * Add a11y stuff
- * Add mobile-first
- */
 
 const getMeths = () => methodologies;
 

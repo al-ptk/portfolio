@@ -3,6 +3,11 @@ import firebaseIcon from '../assets/images/logos/firebase-icon.png';
 import figmaIcon from '../assets/images/logos/figma-icon.png';
 import jestIcon from '../assets/images/logos/jest-icon.jpg';
 
+/*
+ * Learn stlyed-components
+ * Learn tailwind
+ */
+
 const technologies = [
   {
     title: 'React.js',
@@ -25,10 +30,6 @@ const technologies = [
     iconAlt: 'Jest icon',
   },
 ];
-
-/**
- * Learn stlyed-components
- */
 
 const getTechs = () => technologies;
 
