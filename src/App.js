@@ -27,8 +27,8 @@ function App() {
       <Header {...{ setCurrLng }} />
       <main>
         <HeroIntro />
-        <Skills />
         <Projects />
+        <Skills />
         <Contact />
       </main>
       <Footer />
