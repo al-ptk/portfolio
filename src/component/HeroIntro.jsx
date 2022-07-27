@@ -1,22 +1,25 @@
-import { useEffect } from 'react';
+import { useEffect, useRef } from 'react';
 import { useTranslation } from 'react-i18next';
 import bioPic from '../assets/images/github-pic.jpg';
 import './stylesheets/HeroIntro.css';
 
 const HeroIntro = (props) => {
   const { t } = useTranslation();
+  const ref = useRef(null);
 
   useEffect(() => {
-    ['.hero-description p', '.hero-intro img', '.hero-intro h1'].forEach(
-      (selector) => {
-        document.querySelector(selector).classList.add('show');
-      }
-    );
-  }, []);
+    ref.current.onload = () => {
+      ['.hero-description p', '.hero-intro img', '.hero-intro h1'].forEach(
+        (selector) => {
+          document.querySelector(selector).classList.add('show');
+        }
+      );
+    };
+  }, [ref]);
   return (
     <div className="hero-holder">
       <section className="hero-intro">
-        <img src={bioPic} alt={t('MainPicAlt')} />
+        <img ref={ref} src={bioPic} alt={t('MainPicAlt')} />
         <div className="hero-description">
           <h1>
             {t('greetingTop')}{' '}
